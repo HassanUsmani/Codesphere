@@ -270,7 +270,7 @@ export const modules = [
   {
     id: 'ride-hailing',
     index: '04',
-    name: 'Ride-Hailing',
+    name: 'Ride Hailing',
     kicker: 'Getting around',
     icon: 'car',
     tone: 'mint',
@@ -351,7 +351,7 @@ export const modules = [
   {
     id: 'foodpanda',
     index: '05',
-    name: 'foodpanda',
+    name: 'Food Delivery',
     kicker: 'Food delivery',
     icon: 'food',
     tone: 'leaf',

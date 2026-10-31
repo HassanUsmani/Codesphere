@@ -407,7 +407,7 @@ function clearAll() {
   border-top: 1px solid var(--line);
 }
 
-/* ---------- placeholder ---------- */
+/* ---------- placeholder (Updated to Dark Green Theme) ---------- */
 .placeholder {
   display: flex;
   flex-direction: column;
@@ -415,8 +415,9 @@ function clearAll() {
   gap: 0.4rem;
   padding: 1.4rem 1.25rem;
   border-radius: var(--r-lg);
-  border: 1px dashed var(--line-strong);
-  background: rgba(255, 255, 255, 0.55);
+  border: 1px dashed rgba(45, 212, 191, 0.3);
+  background: rgba(13, 31, 28, 0.85);
+  color: #e2e8f0;
 }
 
 .placeholder__icon {
@@ -425,8 +426,8 @@ function clearAll() {
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
-  background: var(--mint-100);
-  color: var(--teal-700);
+  background: rgba(16, 185, 129, 0.15);
+  color: #2dd4bf;
   margin-bottom: 0.2rem;
 }
 
@@ -434,13 +435,18 @@ function clearAll() {
   font-family: var(--font-display);
   font-size: 1.02rem;
   font-weight: 750;
+  color: #ffffff;
 }
 
 .placeholder__text {
   max-width: 38ch;
   font-size: var(--step--1);
   line-height: 1.55;
-  color: var(--muted);
+  color: #94a3b8;
+}
+
+.placeholder__text strong {
+  color: #2dd4bf;
 }
 
 @media (max-width: 56rem) {
