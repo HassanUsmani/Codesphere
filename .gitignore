@@ -1,0 +1,17 @@
+# OS-specific files
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# Global environment/secret files
+.env
+.env.local
+
+# Code editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
