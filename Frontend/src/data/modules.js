@@ -436,6 +436,19 @@ export const modules = [
       },
     ],
   },
+  {
+    id: 'government-apps',
+    index: '06',
+    name: 'Government Apps',
+    kicker: 'Official services',
+    icon: 'id-card',
+    tone: 'deep',
+    type: 'tutorials',
+    summary:
+      'Learn how to use essential government services and public apps step by step through clear video guides.',
+    intro:
+      'Official identity, passport, and driving licence services are increasingly available directly on your phone. These step-by-step video tutorials walk you through each digital service so you can complete your tasks with confidence.',
+  },
 ]
 
 export const moduleById = Object.fromEntries(modules.map((m) => [m.id, m]))

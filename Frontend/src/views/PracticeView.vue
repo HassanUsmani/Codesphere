@@ -4,6 +4,7 @@ import AppIcon from '@/components/AppIcon.vue'
 import A11yToolbar from '@/components/A11yToolbar.vue'
 import ModuleCard from '@/components/ModuleCard.vue'
 import ModuleSection from '@/components/ModuleSection.vue'
+import GovernmentSection from '@/components/GovernmentSection.vue'
 import PhoneTrio from '@/components/PhoneTrio.vue'
 import { modules } from '@/data/modules'
 import { missions } from '@/data/missions'
@@ -87,12 +88,18 @@ watch(
       </div>
     </section>
 
-    <ModuleSection
-      v-for="(module, index) in modules"
-      :key="module.id"
-      :module="module"
-      :alt="index % 2 === 1"
-    />
+    <template v-for="(module, index) in modules" :key="module.id">
+      <GovernmentSection
+        v-if="module.type === 'tutorials'"
+        :module="module"
+        :alt="index % 2 === 1"
+      />
+      <ModuleSection
+        v-else
+        :module="module"
+        :alt="index % 2 === 1"
+      />
+    </template>
   </div>
 </template>
 
