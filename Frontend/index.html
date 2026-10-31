@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!-- <link rel="icon" href="/favicon.ico"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web</title>
+    <meta name="theme-color" content="#06302d" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#071512" media="(prefers-color-scheme: dark)">
+    <meta
+      name="description"
+      content="Tech Guide — practise everyday phone skills on a pretend phone and learn to spot scams in WhatsApp, banking, ride-hailing and food delivery. Everything stays on your device."
+    >
+    <title>Tech Guide · Everyday phone skills</title>
+    <script>
+      /* Set the theme before first paint so there is no flash of the wrong colours. */
+      (function () {
+        try {
+          var saved = localStorage.getItem('codesphere.practice.theme')
+          if (saved) saved = JSON.parse(saved)
+          var prefersDark =
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+          var dark = saved === 'dark' || (saved !== 'light' && prefersDark)
+          document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="app"></div>
