@@ -1,5 +1,6 @@
 import { computed, reactive, watch } from 'vue'
 import { read, write } from '@/lib/storage'
+import { levels } from '@/data/scamLevels'
 
 const initialState = {
   missions: {},
@@ -18,7 +19,9 @@ watch(
 
 export const completedMissions = computed(() => Object.keys(progress.missions).length)
 
-export const completedScamLevels = computed(() => Object.keys(progress.scams).length)
+export const completedScamLevels = computed(
+  () => levels.filter((level) => Boolean(progress.scams[level.id])).length,
+)
 
 export function isMissionDone(id) {
   return Boolean(progress.missions[id])

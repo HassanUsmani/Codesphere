@@ -13,7 +13,7 @@ function parse(hash) {
 export const route = reactive(parse(window.location.hash))
 
 export const currentMission = computed(() => route.params.mission || '')
-export const currentLevel = computed(() => route.params.level || 'beginner')
+export const currentLevel = computed(() => route.params.level || 'scam')
 
 function apply() {
   const next = parse(window.location.hash)

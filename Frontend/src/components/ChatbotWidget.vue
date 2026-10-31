@@ -1,7 +1,7 @@
 <script setup>
 import { nextTick, ref, watch } from 'vue'
 import AppIcon from '@/components/AppIcon.vue'
-import { sendMessage } from '@/services/chatService'
+import { sendMessage } from '@/lib/services/chatService'
 
 const open = ref(false)
 const input = ref('')
