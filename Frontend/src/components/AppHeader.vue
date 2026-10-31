@@ -11,8 +11,8 @@ const nav = [
   { id: 'whatsapp', label: 'WhatsApp' },
   { id: 'banking', label: 'Banking' },
   { id: 'fraud-detection', label: 'Fraud Detection' },
-  { id: 'ride-hailing', label: 'Ride-Hailing' },
-  { id: 'foodpanda', label: 'foodpanda' },
+  { id: 'ride-hailing', label: 'Ride Hailing' },
+  { id: 'foodpanda', label: 'Food Delivery' },
 ]
 
 const active = ref('home')

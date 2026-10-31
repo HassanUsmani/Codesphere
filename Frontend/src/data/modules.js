@@ -69,11 +69,11 @@ export const modules = [
       { type: 'mission', id: 'whatsapp-new-number' },
       {
         type: 'link',
-        href: '#/scam?level=intermediate',
+        href: '#/scam?level=scam',
         icon: 'shield-alert',
-        label: 'Scam Simulator · Intermediate',
-        text: 'Convincing messages that copy real people and companies.',
-        meta: '3 messages · 5 min · 100 XP',
+        label: 'Scam Simulator',
+        text: 'Messages that copy real people and companies.',
+        meta: '5 messages · 8 min · 160 XP',
       },
       {
         type: 'link',
@@ -150,11 +150,11 @@ export const modules = [
       { type: 'mission', id: 'settings-safety' },
       {
         type: 'link',
-        href: '#/scam?level=beginner',
+        href: '#/scam?level=scam',
         icon: 'shield-alert',
-        label: 'Scam Simulator · Beginner',
-        text: 'A fake bank call, a prize text and a delivery fee.',
-        meta: '3 messages · 4 min · 80 XP',
+        label: 'Scam Simulator',
+        text: 'A fake bank call, a family impersonation and a delivery update.',
+        meta: '5 messages · 8 min · 160 XP',
       },
       {
         type: 'link',
@@ -234,27 +234,11 @@ export const modules = [
     practice: [
       {
         type: 'link',
-        href: '#/scam?level=beginner',
+        href: '#/scam?level=scam',
         icon: 'shield-alert',
-        label: 'Scam Simulator · Beginner',
-        text: 'Obvious scams and the classic warning signs.',
-        meta: '3 messages · 4 min · 80 XP',
-      },
-      {
-        type: 'link',
-        href: '#/scam?level=intermediate',
-        icon: 'shield-alert',
-        label: 'Scam Simulator · Intermediate',
-        text: 'Messages that copy real companies and people.',
-        meta: '3 messages · 5 min · 100 XP',
-      },
-      {
-        type: 'link',
-        href: '#/scam?level=advanced',
-        icon: 'shield-alert',
-        label: 'Scam Simulator · Advanced',
-        text: 'Subtle signs, pressure tactics — and some genuine messages.',
-        meta: '3 messages · 6 min · 120 XP',
+        label: 'Scam Simulator',
+        text: 'Pressure tactics, impersonation and genuine messages.',
+        meta: '5 messages · 8 min · 160 XP',
       },
       { type: 'mission', id: 'sms-delivery-link' },
       {
@@ -270,7 +254,7 @@ export const modules = [
   {
     id: 'ride-hailing',
     index: '04',
-    name: 'Ride-Hailing',
+    name: 'Ride Hailing',
     kicker: 'Getting around',
     icon: 'car',
     tone: 'mint',
@@ -351,7 +335,7 @@ export const modules = [
   {
     id: 'foodpanda',
     index: '05',
-    name: 'foodpanda',
+    name: 'Food Delivery',
     kicker: 'Food delivery',
     icon: 'food',
     tone: 'leaf',
@@ -412,11 +396,11 @@ export const modules = [
       { type: 'mission', id: 'order-food' },
       {
         type: 'link',
-        href: '#/scam?level=beginner',
+        href: '#/scam?level=scam',
         icon: 'shield-alert',
-        label: 'Scam Simulator · Beginner',
+        label: 'Scam Simulator',
         text: 'Includes the fake delivery fee text.',
-        meta: '3 messages · 4 min · 80 XP',
+        meta: '5 messages · 8 min · 160 XP',
       },
       {
         type: 'link',

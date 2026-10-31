@@ -2,12 +2,11 @@
 import { computed, ref } from 'vue'
 import AppIcon from '@/components/AppIcon.vue'
 import { missions } from '@/data/missions'
-import { completedMissions, progress, resetProgress } from '@/composables/useProgress'
+import { levels } from '@/data/scamLevels'
+import { completedMissions, completedScamLevels, progress, resetProgress } from '@/composables/useProgress'
 
 const armed = ref(false)
 const pct = computed(() => Math.round((completedMissions.value / missions.length) * 100))
-const scamDone = computed(() => Object.keys(progress.scams).length)
-
 function erase() {
   if (!armed.value) {
     armed.value = true
@@ -46,8 +45,8 @@ function erase() {
       <div class="summary__stat">
         <span class="summary__icon"><AppIcon name="shield" :size="15" /></span>
         <div>
-          <p class="summary__num">{{ scamDone }}<span>/3</span></p>
-          <p class="summary__label">Scam levels</p>
+          <p class="summary__num">{{ completedScamLevels }}<span>/{{ levels.length }}</span></p>
+          <p class="summary__label">Scam module</p>
         </div>
       </div>
       <div class="summary__stat">

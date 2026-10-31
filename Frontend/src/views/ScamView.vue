@@ -49,14 +49,14 @@ function nextLevel() {
         <p class="eyebrow">Practice · Scam Simulator</p>
         <h1 class="h1 scam-hero__title">Judge the message, not the panic.</h1>
         <p class="lead scam-hero__lead">
-          Nine realistic messages, three levels. Inspect the sender, the words and the links, then decide:
+          Five realistic messages in one module. Inspect the sender, the words and the links, then decide:
           safe, check first, or scam. Nothing opens a real link.
         </p>
 
         <div class="scam-hero__strip">
           <div class="scam-hero__stat">
-            <span class="scam-hero__num">{{ completedScamLevels }}<span>/3</span></span>
-            <span class="tiny muted">Levels completed</span>
+            <span class="scam-hero__num">{{ completedScamLevels }}<span>/{{ levels.length }}</span></span>
+            <span class="tiny muted">Module completed</span>
           </div>
           <div class="scam-hero__divider" aria-hidden="true" />
           <div class="scam-hero__stat">
@@ -72,7 +72,7 @@ function nextLevel() {
     </section>
 
     <div class="container scam-body">
-      <div class="level-picker" role="group" aria-label="Choose a difficulty">
+      <div class="level-picker" role="group" aria-label="Scam Simulator module">
         <button
           v-for="l in levels"
           :key="l.id"
@@ -85,7 +85,7 @@ function nextLevel() {
           <span class="level-btn__top">
             <span class="level-btn__title">{{ l.title }}</span>
             <span v-if="progress.scams[l.id]" class="level-btn__best">
-              Best {{ progress.scams[l.id].best }}/{{ progress.scams[l.id].total || 3 }}
+              Best {{ progress.scams[l.id].best }}/{{ progress.scams[l.id].total || 5 }}
             </span>
           </span>
           <span class="level-btn__desc">{{ l.description }}</span>
@@ -151,7 +151,9 @@ function nextLevel() {
   background: var(--paper);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-xs);
-  max-width: 46rem;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
 }
 
 .scam-hero__stat {
@@ -198,7 +200,7 @@ function nextLevel() {
 /* ---------- level picker ---------- */
 .level-picker {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.7rem;
   padding-top: 0.4rem;
 }
@@ -213,6 +215,8 @@ function nextLevel() {
   background: var(--paper);
   text-align: left;
   color: var(--ink-soft);
+  width: 100%;
+  box-sizing: border-box;
   transition: transform 180ms var(--ease), border-color 180ms var(--ease), box-shadow 180ms var(--ease);
 }
 

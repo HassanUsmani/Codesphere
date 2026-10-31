@@ -44,8 +44,8 @@ function erase() {
             <p class="xp-card__label">XP earned</p>
             <p class="xp-card__num">{{ progress.xp }}<span>/ {{ totalXpPossible }}</span></p>
             <p class="xp-card__note">
-              {{ completedMissions }} of {{ missions.length }} missions · {{ completedScamLevels }} of 3 scam
-              levels
+              {{ completedMissions }} of {{ missions.length }} missions · {{ completedScamLevels }} of {{ levels.length }}
+              scam modules
             </p>
           </div>
         </div>
@@ -89,11 +89,11 @@ function erase() {
           <div class="block__head">
             <div>
               <p class="eyebrow">Scam Simulator</p>
-              <h2 id="scams-title" class="h3">Levels</h2>
+              <h2 id="scams-title" class="h3">Module</h2>
             </div>
-            <span class="badge">{{ completedScamLevels }}/3</span>
+            <span class="badge">{{ completedScamLevels }}/{{ levels.length }}</span>
           </div>
-          <div class="bar" role="progressbar" :aria-valuenow="scamPct" aria-valuemin="0" aria-valuemax="100" aria-label="Scam levels completed">
+          <div class="bar" role="progressbar" :aria-valuenow="scamPct" aria-valuemin="0" aria-valuemax="100" aria-label="Scam module completed">
             <div class="bar__fill" :style="{ width: `${scamPct}%` }" />
           </div>
 
@@ -105,7 +105,7 @@ function erase() {
                 <span class="row-item__sub">{{ l.minutes }} min · {{ l.xp }} XP</span>
               </span>
               <span v-if="progress.scams[l.id]" class="pill pill--ok">
-                Best {{ progress.scams[l.id].best }}/{{ progress.scams[l.id].total || 3 }}
+                Best {{ progress.scams[l.id].best }}/{{ progress.scams[l.id].total || 5 }}
               </span>
               <span v-else class="pill">Not started</span>
               <a class="row-item__go" :href="`#/scam?level=${l.id}`">
@@ -349,9 +349,14 @@ function erase() {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.1rem;
   align-items: start;
+}
+
+.split > .block {
+  width: 100%;
+  min-width: 0;
 }
 
 .plan-state {

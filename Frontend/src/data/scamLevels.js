@@ -3,72 +3,18 @@
 
 export const levels = [
   {
-    id: 'beginner',
-    title: 'Beginner',
-    description: 'Obvious scams. Learn the classic warning signs.',
-    minutes: 4,
-    xp: 80,
-  },
-  {
-    id: 'intermediate',
-    title: 'Intermediate',
-    description: 'Convincing messages that copy real companies.',
-    minutes: 5,
-    xp: 100,
-  },
-  {
-    id: 'advanced',
-    title: 'Advanced',
-    description: 'Subtle signs, pressure tactics — and some genuine messages.',
-    minutes: 6,
-    xp: 120,
+    id: 'scam',
+    title: 'Scam Simulator',
+    description: 'Practice spotting pressure tactics, impersonation and genuine messages.',
+    minutes: 8,
+    xp: 160,
   },
 ]
 
 export const messages = [
-  /* ---------- Beginner ---------- */
-  {
-    id: 'b-prize',
-    level: 'beginner',
-    channel: 'sms',
-    app: 'Messages',
-    time: '11:02 AM',
-    senderLabel: 'Unknown sender',
-    sender: {
-      id: 'sender',
-      text: '+92 300 447 9012',
-      inspect: 'An ordinary mobile number. Not saved in your contacts, and not a company sender ID.',
-      suspicious: true,
-      why: 'Real prize schemes write from an official short code, not a random phone number.',
-    },
-    body: [
-      'CONGRATULATIONS! Your number has ',
-      {
-        id: 'won',
-        text: 'WON Rs. 2,500,000 in the Lucky Draw',
-        suspicious: true,
-        inspect: 'You never entered any lucky draw.',
-        why: 'You cannot win a draw you never entered. That is the whole trick.',
-      },
-      '. To claim, ',
-      {
-        id: 'fee',
-        text: 'pay a processing fee of Rs. 4,999',
-        suspicious: true,
-        inspect: 'It asks you to pay before you receive anything.',
-        why: 'A real prize never charges you to collect it. The fee is the scam.',
-      },
-      ' and send a photo of your CNIC to this number.',
-    ],
-    isScam: true,
-    verdict: 'Fake prize',
-    explanation:
-      'Prize and lottery messages are the most common scam in circulation. Unknown number, a prize you never entered, and a fee to claim it.',
-    whatToDo: ['Do not reply and do not pay.', 'Delete the message, then block and report the number.'],
-  },
   {
     id: 'b-bank-call',
-    level: 'beginner',
+    level: 'scam',
     channel: 'call',
     app: 'Phone',
     time: 'Call · 2:31',
@@ -119,7 +65,7 @@ export const messages = [
   },
   {
     id: 'b-courier',
-    level: 'beginner',
+    level: 'scam',
     channel: 'sms',
     app: 'Messages',
     time: '4:18 PM',
@@ -161,53 +107,9 @@ export const messages = [
     ],
   },
 
-  /* ---------- Intermediate ---------- */
-  {
-    id: 'i-kyc',
-    level: 'intermediate',
-    channel: 'sms',
-    app: 'Messages',
-    time: '9:12 AM',
-    senderLabel: 'Business sender',
-    sender: {
-      id: 'sender',
-      text: 'MYBANK',
-      inspect: 'The sender name matches your bank, but sender names can be imitated.',
-      suspicious: true,
-      why: 'A matching sender name is not a guarantee. Real banks message from their registered short code.',
-    },
-    body: [
-      'Dear customer, your KYC is ',
-      {
-        id: 'expire',
-        text: 'expiring today',
-        suspicious: true,
-        inspect: 'KYC updates are never a same-day emergency, and never arrive only by text.',
-        why: 'Artificial deadlines are designed to stop you from thinking or asking someone.',
-      },
-      '. To keep your account active, update at ',
-      {
-        id: 'link',
-        text: 'mybank-secure-verify.com/kyc',
-        suspicious: true,
-        inspect: 'The real bank website does not have words like “secure-verify” bolted in front of it.',
-        why: 'Extra words before the real name are a classic disguise.',
-      },
-      '. Enter your card number and PIN to confirm.',
-    ],
-    isScam: true,
-    verdict: 'Phishing link',
-    explanation:
-      'The page copies your bank’s colours to collect your card number and PIN. The address bar is the tell.',
-    whatToDo: [
-      'Do not tap the link.',
-      'Open your bank’s app yourself and check for any notice there.',
-      'Report the message as junk.',
-    ],
-  },
   {
     id: 'i-new-number',
-    level: 'intermediate',
+    level: 'scam',
     channel: 'whatsapp',
     app: 'WhatsApp',
     time: '9:47 PM',
@@ -256,54 +158,10 @@ export const messages = [
       'Block and report the number.',
     ],
   },
-  {
-    id: 'i-job',
-    level: 'intermediate',
-    channel: 'email',
-    app: 'Mail',
-    time: '2:06 PM',
-    senderLabel: 'Jobs inbox',
-    sender: {
-      id: 'sender',
-      text: 'hr@careers-hiringgroup.net',
-      inspect: 'The domain has an extra word (“careers-hiringgroup”) and does not belong to any company you applied to.',
-      suspicious: true,
-      why: 'Check the part after the @. That is who really sent it.',
-    },
-    body: [
-      'Congratulations, you are ',
-      {
-        id: 'selected',
-        text: 'selected for a work-from-home job at Rs. 90,000 per month',
-        suspicious: true,
-        inspect: 'You never applied for this job.',
-        why: 'An offer for a job you never applied to is bait.',
-      },
-      '. To activate your account, ',
-      {
-        id: 'fee',
-        text: 'pay a refundable registration fee of Rs. 2,500',
-        suspicious: true,
-        inspect: 'A job that charges you before you start.',
-        why: 'Employers pay you. They never charge a joining fee.',
-      },
-      ' and share your bank account details.',
-    ],
-    isScam: true,
-    verdict: 'Fake job offer',
-    explanation:
-      'Job scams collect a “registration fee” and your bank details. The salary is invented to make the fee feel small.',
-    whatToDo: [
-      'Do not pay or share account details.',
-      'Check the company on its official website, not through this email.',
-      'Delete and report the email.',
-    ],
-  },
 
-  /* ---------- Advanced ---------- */
   {
     id: 'a-genuine-bank',
-    level: 'advanced',
+    level: 'scam',
     channel: 'sms',
     app: 'Messages',
     time: '7:40 PM',
@@ -336,51 +194,8 @@ export const messages = [
     ],
   },
   {
-    id: 'a-lookalike',
-    level: 'advanced',
-    channel: 'whatsapp',
-    app: 'WhatsApp',
-    time: '6:22 PM',
-    senderLabel: 'Business account',
-    sender: {
-      id: 'sender',
-      text: 'Easypaisa Support ✓',
-      inspect: 'The tick and name look right, but this account is not in your verified business list and uses a personal number.',
-      suspicious: true,
-      why: 'A verified badge can be imitated in a screenshot or a look-alike account.',
-    },
-    body: [
-      'Dear customer, we noticed an ',
-      {
-        id: 'txn',
-        text: 'unusual transaction of Rs. 12,400 on your wallet',
-        suspicious: true,
-        inspect: 'No such transaction appears in your app.',
-        why: 'Inventing a transaction creates panic. Your own app is the only record that counts.',
-      },
-      '. If this was not you, ',
-      {
-        id: 'form',
-        text: 'confirm your wallet PIN in this chat to reverse it',
-        suspicious: true,
-        inspect: 'A support agent asking for your PIN inside a chat.',
-        why: 'No real support team asks for a PIN. Reversals are done in the app, by you.',
-      },
-      '. Reply within 10 minutes.',
-    ],
-    isScam: true,
-    verdict: 'Look-alike support',
-    explanation:
-      'The branding is convincing; the request is impossible. Support staff can see your account without your PIN.',
-    whatToDo: [
-      'Open the wallet app yourself and check the transaction list.',
-      'Never send a PIN in a chat.',
-      'Report the conversation to the real business.',
-    ],
-  },
-  {
     id: 'a-genuine-courier',
-    level: 'advanced',
+    level: 'scam',
     channel: 'sms',
     app: 'Messages',
     time: '10:15 AM',

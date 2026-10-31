@@ -249,7 +249,7 @@ const chosen = computed(() => picks.value[picks.value.length - 1] || null)
       </div>
 
       <div v-else class="scam__actions">
-        <button type="button" class="btn btn--ghost btn--sm" @click="restart">Start this level again</button>
+        <button type="button" class="btn btn--ghost btn--sm" @click="restart">Start the module again</button>
         <button type="button" class="btn btn--primary" @click="nextMessage">
           {{ index + 1 < total ? 'Next message' : 'See my results' }}
           <AppIcon name="arrow-right" :size="15" />
@@ -285,9 +285,9 @@ const chosen = computed(() => picks.value[picks.value.length - 1] || null)
         </ol>
 
         <div class="finish__actions">
-          <button type="button" class="btn btn--ghost" @click="replay">Practise this level again</button>
+          <button type="button" class="btn btn--ghost" @click="replay">Practise the module again</button>
           <button type="button" class="btn btn--primary" @click="emit('next-level')">
-            Try the next level
+            Try the module again
             <AppIcon name="arrow-right" :size="15" />
           </button>
         </div>
