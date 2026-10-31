@@ -12,7 +12,7 @@ const nav = [
   { id: 'banking', label: 'Banking' },
   { id: 'fraud-detection', label: 'Fraud Detection' },
   { id: 'ride-hailing', label: 'Ride-Hailing' },
-  { id: 'foodpanda', label: 'foodpanda' },
+  { id: 'foodpanda', label: 'Food Delivery' },
   { id: 'government-apps', label: 'Gov Apps' },
 ]
 

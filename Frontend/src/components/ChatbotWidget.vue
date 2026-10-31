@@ -1,7 +1,7 @@
 <script setup>
 import { nextTick, ref, watch } from 'vue'
 import AppIcon from '@/components/AppIcon.vue'
-import { sendMessage } from '@/services/chatService'
+import { sendMessage } from '@/lib/services/chatService'
 
 const open = ref(false)
 const input = ref('')
@@ -17,11 +17,13 @@ const messages = ref([
     id: 1,
     role: 'assistant',
     text: 'Hello. I am the Tech Guide Assistant. I can point you to a module, explain a red flag, or open a practice activity.',
-    label: 'Demo',
+    
   },
 ])
 
 const suggestions = [
+  "موبائل کو وائی فائی سے کیسے جوڑیں؟",
+  "WhatsApp par photo kaise bhejun?",
   'How do I spot a scam?',
   'What should I check before paying?',
   'How do I practise a ride booking?',
@@ -115,7 +117,7 @@ watch(open, (value) => {
         <span class="chatbot__headIcon" aria-hidden="true"><AppIcon name="sparkles" :size="17" /></span>
         <div class="chatbot__headText">
           <p id="tg-chat-title" class="chatbot__title">Tech Guide Assistant</p>
-          <p class="chatbot__sub">Demo · no live assistant connected</p>
+          
         </div>
         <button type="button" class="chatbot__close" aria-label="Close assistant" @click="closeChat">
           <AppIcon name="x" :size="18" />

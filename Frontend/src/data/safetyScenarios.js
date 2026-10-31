@@ -26,7 +26,7 @@ export const scenarios = [
       verify: ['Open the company’s own website or app and look for the offer there.'],
       act: ['Delete the message.', 'Block and report the sender.', 'Warn family if it arrived in a group.'],
     },
-    related: { label: 'Practise in the Scam Simulator', route: 'scam', params: { level: 'beginner' } },
+    related: { label: 'Practise in the Scam Simulator', route: 'scam', params: { level: 'scam' } },
   },
   {
     id: 'otp',
@@ -78,7 +78,7 @@ export const scenarios = [
       verify: ['Call the number on the back of your card, or open the bank’s own app.'],
       act: ['Report the call.', 'Block the number.', 'Check your account in the app.'],
     },
-    related: { label: 'See the fake bank call in the Scam Simulator', route: 'scam', params: { level: 'beginner' } },
+    related: { label: 'See the fake bank call in the Scam Simulator', route: 'scam', params: { level: 'scam' } },
   },
   {
     id: 'police',
@@ -147,7 +147,7 @@ export const scenarios = [
         'Tell family so they can watch for the same approach.',
       ],
     },
-    related: { label: 'Practise spotting the signs', route: 'scam', params: { level: 'intermediate' } },
+    related: { label: 'Practise spotting the signs', route: 'scam', params: { level: 'scam' } },
   },
   {
     id: 'family-voice',
@@ -161,7 +161,7 @@ export const scenarios = [
       verify: ['Hang up and call the person back on their saved number.'],
       act: ['Agree a family check phrase for money requests.', 'Report the call.'],
     },
-    related: { label: 'See the family impersonation example', route: 'scam', params: { level: 'intermediate' } },
+    related: { label: 'See the family impersonation example', route: 'scam', params: { level: 'scam' } },
   },
 ]
 
