@@ -11,8 +11,9 @@ const nav = [
   { id: 'whatsapp', label: 'WhatsApp' },
   { id: 'banking', label: 'Banking' },
   { id: 'fraud-detection', label: 'Fraud Detection' },
-  { id: 'ride-hailing', label: 'Ride Hailing' },
+  { id: 'ride-hailing', label: 'Ride-Hailing' },
   { id: 'foodpanda', label: 'Food Delivery' },
+  { id: 'government-apps', label: 'Gov Apps' },
 ]
 
 const active = ref('home')
@@ -257,7 +258,7 @@ onBeforeUnmount(() => {
   color: #fff;
 }
 
-@media (max-width: 55.99rem) {
+@media (max-width: 63.99rem) {
   .app-nav {
     display: none;
   }
